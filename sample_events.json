@@ -1,0 +1,67 @@
+{
+  "description": "Eventos de ejemplo basados en el lab CyberCorp S.A.",
+  "note": "Estos son los Event IDs reales detectados durante la semana SOC simulada",
+  "events": [
+    {
+      "EventID": 4625,
+      "TimeCreated": "2026-06-11T16:32:44Z",
+      "Description": "Login fallido SMB",
+      "TargetUserName": "usuarioprueba",
+      "IpAddress": "192.168.56.30",
+      "Count": 20,
+      "MITRE": "T1110.001 — Brute Force"
+    },
+    {
+      "EventID": 4720,
+      "TimeCreated": "2026-06-17T21:22:37Z",
+      "Description": "Cuenta hackersoc creada",
+      "SubjectUserName": "Administrador",
+      "TargetUserName": "hackersoc",
+      "MITRE": "T1136 — Create Account"
+    },
+    {
+      "EventID": 4728,
+      "TimeCreated": "2026-06-17T21:35:55Z",
+      "Description": "hackersoc agregado a Domain Admins",
+      "SubjectUserName": "Administrador",
+      "MemberName": "hackersoc",
+      "TargetUserName": "Domain Admins",
+      "MITRE": "T1098 — Account Manipulation"
+    },
+    {
+      "EventID": 4732,
+      "TimeCreated": "2026-06-17T21:23:48Z",
+      "Description": "hackersoc agregado a Administradores locales — Level 12 en Wazuh",
+      "SubjectUserName": "Administrador",
+      "MemberName": "hackersoc",
+      "TargetUserName": "Administradores",
+      "MITRE": "T1098 — Account Manipulation"
+    },
+    {
+      "EventID": 7045,
+      "TimeCreated": "2026-06-18T20:00:30Z",
+      "Description": "Servicio sospechoso instalado",
+      "ServiceName": "WindowsUpdateHelper",
+      "ImagePath": "C:\\Windows\\System32\\backdoor.ps1",
+      "StartType": "Automático",
+      "AccountName": "LocalSystem",
+      "MITRE": "T1543.003 — Windows Service"
+    },
+    {
+      "EventID": 4698,
+      "TimeCreated": "2026-06-18T20:01:00Z",
+      "Description": "Tarea programada maliciosa creada",
+      "TaskName": "WindowsSecurityUpdate",
+      "SubjectUserName": "Administrador",
+      "MITRE": "T1053.005 — Scheduled Task"
+    },
+    {
+      "EventID": 4726,
+      "TimeCreated": "2026-06-17T22:06:37Z",
+      "Description": "Cuenta hackersoc eliminada — acción de contención SOC",
+      "SubjectUserName": "Administrador",
+      "TargetUserName": "hackersoc",
+      "MITRE": "T1531 — Account Access Removal"
+    }
+  ]
+}
